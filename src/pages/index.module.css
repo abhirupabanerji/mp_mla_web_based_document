@@ -1,0 +1,132 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+/* Main hero section */
+.heroSection {
+  width: 100%;
+  background: linear-gradient(135deg, #002b5c 0%, #003d7a 100%);
+  overflow: hidden;
+}
+
+/* Container for the side-by-side layout */
+.heroContainer {
+  display: flex;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 500px;
+}
+
+/* Left side - Image (50% width) */
+.heroImageSide {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.heroImage {
+  width: 100%;
+  max-width: 700px;
+  height: 450px;
+  background-image: url('/img/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Right side - Text (50% width) */
+.heroTextSide {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heroTitle {
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.heroSubtitle {
+  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.95;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+/* Tablet styles - Stack vertically */
+@media screen and (max-width: 996px) {
+  .heroContainer {
+    flex-direction: column;
+    min-height: auto;
+    padding: 2rem 0;
+  }
+
+  .heroImageSide {
+    width: 100%;
+    padding: 2rem 1.5rem 1rem;
+  }
+
+  .heroImage {
+    height: 350px;
+    max-width: 100%;
+  }
+
+  .heroTextSide {
+    width: 100%;
+    padding: 2rem 2rem 3rem;
+    text-align: center;
+  }
+  
+  .heroTitle {
+    font-size: 2.75rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 600px) {
+  .heroContainer {
+    padding: 1.5rem 0;
+  }
+
+  .heroImageSide {
+    padding: 1.5rem 1rem 0.5rem;
+  }
+
+  .heroImage {
+    height: 280px;
+    border-radius: 12px;
+  }
+
+  .heroTextSide {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+  
+  .heroTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+}
